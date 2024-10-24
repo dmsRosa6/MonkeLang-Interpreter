@@ -45,6 +45,7 @@ To start the Monkey language REPL (Read-Eval-Print-Loop):
 
 ```bash
 ./monkey
+```
 
 ### Possible Future Work 🛠️
 
