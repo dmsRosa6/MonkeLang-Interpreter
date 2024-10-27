@@ -1,6 +1,8 @@
 package ast
 
 import (
+	"bytes"
+
 	"github.com/dmsRosa/Monke/src/Monke/token"
 )
 
@@ -63,3 +65,43 @@ type ExpressionStatement struct {
 
 func (es *ExpressionStatement) statementNode()       {}
 func (es *ExpressionStatement) TokenLiteral() string { return es.Token.Literal }
+
+func (p *Program) String() string {
+	var out bytes.Buffer
+	for _, s := range p.Statements {
+		out.WriteString(s.String())
+	}
+	return out.String()
+}
+
+func (ls *LetStatement) String() string {
+	var out bytes.Buffer
+	out.WriteString(ls.TokenLiteral() + " ")
+	out.WriteString(ls.Name.String())
+	out.WriteString(" = ")
+	if ls.Value != nil {
+		out.WriteString(ls.Value.String())
+	}
+
+	out.WriteString(";")
+	return out.String()
+}
+
+func (rs *ReturnStatement) String() string {
+	var out bytes.Buffer
+	out.WriteString(rs.TokenLiteral() + " ")
+	if rs.Value != nil {
+		out.WriteString(rs.Value.String())
+	}
+	out.WriteString(";")
+	return out.String()
+}
+
+func (es *ExpressionStatement) String() string {
+	if es.Value != nil {
+		return es.Value.String()
+	}
+	return ""
+}
+
+func (i *Identifier) String() string { return i.Value }
