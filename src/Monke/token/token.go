@@ -38,7 +38,7 @@ const (
 	GTE    = ">="
 	LTE    = "<="
 	EQ     = "=="
-	NOT_EQ = "!="
+	NEQ = "!="
 	// Keywords
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
