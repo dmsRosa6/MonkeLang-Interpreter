@@ -4,7 +4,7 @@
 
 This project implements the **Monkey** language—a dynamically typed, Lisp-like language—featuring first-class functions, closures, and a simple, expressive syntax. The Monkey Interpreter is built from scratch and showcases core concepts of language design, parsing, and evaluation.
 
-## Features 🌟
+## Features
 
 - **Arithmetic Operations**: `+`, `-`, `*`, `/`
 - **Booleans & Logic**: `true`, `false`, `!`, `&&`, `||`
@@ -18,7 +18,7 @@ This project implements the **Monkey** language—a dynamically typed, Lisp-like
 - **Built-in Functions**: Standard functions like `len`, `first`, `last`, `push`
 - **REPL**: A Read-Eval-Print-Loop for live interaction with Monkey
 
-## Getting Started 🚀
+## Getting Started
 
 ### Prerequisites
 
